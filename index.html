@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Thanks for taking a look! -->
+
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- BACK TO TOP ARROW -->
+<a class="smoothScroll" href="#welcome"><img id="btt" class="img-responsive" src="http://allfordance.com/image/orbital-arrow-up.png"></a>
+
+<!-- NAV -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a class="smoothScroll" href="#welcome" onclick="closeNav()">Home</a>
+    <a class="smoothScroll" href="#about" onclick="closeNav()">About</a>
+    <a class="smoothScroll" href="#portfolio" onclick="closeNav()">Portfolio</a>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span id="openmenu" onclick="openNav()"><b>Menu</b></span>
+
+<center>
+  <!-- WELCOME -->
+  <div id="welcome">
+    <h1>St. Ignatious Orthodox Church</h1>
+    <h3><b>Kallumkal</b></h3>
+    <a class="smoothScroll" href="#about"><img id="press" src="http://gowingwoman.com/img/menu_down_arrow.png"></a>
+  </div>
+</center>
+
+<!-- ABOUT -->
+<div id="about">
+  <h1>About Me</h1>
+  <center>
+    <div id="self">
+      <img class="img-responsive" src="./images/church.jpg">
+    </div>
+  </center>
+  <br>
+  <p>Hi! I’m Emerald Teve, a.k.a. Polianthes, and web development is my passion.<br><br> I help people build websites they love, and I absolutely adore making people smile.<br><br> When I’m not programming, you can find me drawing, or drinking a nice cup
+    of tea.
+    <br><br>If you'd like, scroll down to see some examples of my work!<br><br>Want to work together? I’d love to hear from you!</p>
+  <br><br>
+  <span id="email">
+    <img src="http://sellbuybook.com/images/email.png"> emerald.teve@gmail.com</span>
+  <span id="portScroll">
+    <a class="smoothScroll" href="#portfolio"><img src="http://www.meegankent.com/images/portfolio-icon2.png"> View My Portfolio</a></span>
+</div>
+
+<!-- PORTFOLIO -->
+<div id="portfolio">
+  <h1>Portfolio</h1>
+  <h3>Here you'll find some projects I've worked on! Click on a project to see a demo of it.</h3>
+  <br>
+  <center>
+    <div id="port" class="container">
+      <table>
+          <!-- PORTFOLIO -->
+          <tr>
+            <a target="_blank" href="https://s.codepen.io/Polianthes/debug/xVQoRx#"><img class="img-responsive thumbnail" src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?crop=entropy&fit=crop&fm=jpg&h=900&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1300"></a>
+          </tr>
+          <!-- UPWORK -->
+          <tr>
+            <a target="_blank" href="https://s.codepen.io/Polianthes/debug/NNBLQw/XBrGRqgdvoZM"><img class="img-responsive thumbnail" src="https://farm8.staticflickr.com/7274/26213112344_c162d26712_b.jpg"></a>
+          </tr>
+          <!-- TRIBUTE PAGE -->
+          <tr>
+            <a target="_blank" href="https://s.codepen.io/Polianthes/debug/NNpJwN"><img class="img-responsive thumbnail" src="https://farm8.staticflickr.com/7387/26213110134_8afa53cf2e_b.jpg"></a>
+          </tr>
+      </table>
+    </div>
+  </center>
+</div>
+</body>
+</html>
