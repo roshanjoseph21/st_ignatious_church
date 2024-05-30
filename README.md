@@ -1,2 +1,2 @@
 # ST IGNATIOUS CHURCH SITE
-comming soon......
+A static website of church model - under Devlopment
