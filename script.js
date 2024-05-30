@@ -1,30 +1,33 @@
-/* Open when someone clicks on the span element */
+// Function to open the navigation overlay
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
-  }
-  
-  /* Close when someone clicks on the "x" symbol inside the overlay */
-  function closeNav() {
+}
+
+// Function to close the navigation overlay
+function closeNav() {
     document.getElementById("myNav").style.width = "0%";
-  }
-  
-  $(function() {
-    // This will select everything with the class smoothScroll
-    // This should prevent problems with carousel, scrollspy, etc...
-    $('.smoothScroll').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1300); // The number here represents the speed of the scroll in milliseconds
-          return false;
+}
+
+// Wait for the document to be fully loaded
+$(document).ready(() => {
+    // Smooth scroll for all elements with class 'smoothScroll'
+    $('.smoothScroll').on('click', function(event) {
+        // Check if the clicked link's pathname and hostname match the current location
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            // Find the target element
+            let target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // If the target element exists, animate the scroll
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1300); // The speed of the scroll in milliseconds
+                return false;
+            }
         }
-      }
     });
-  });
-  
-  // Change the speed to whatever you want
-  // Personally i think 1000 is too much
-  // Try 800 or below, it seems not too much but it will make a difference
+});
+
+// Attach event listeners to the menu buttons
+document.getElementById('openmenu').addEventListener('click', openNav);
+document.querySelector('.closebtn').addEventListener('click', closeNav);
