@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     background-color: #cac376;
 }
@@ -23,7 +23,6 @@ body {
 
 /* WELCOME */
 #welcome {
-    font-family: 'Amatic SC', cursive;
     color: #045353;
     background: url("./images/skyview.jpg") no-repeat center center/cover;
     height: 100vh;
@@ -64,7 +63,6 @@ body {
 }
 
 #about h1 {
-    font-family: 'Amatic SC', cursive;
     font-size: 2.5rem;
     font-weight: bold;
     text-align: left;
@@ -107,7 +105,6 @@ body {
 
 /* PORTFOLIO */
 #portfolio {
-    font-family: 'Amatic SC', cursive;
     background-color: #68BDCA;
     color: white;
     padding: 5%;
@@ -115,7 +112,6 @@ body {
 }
 
 #portfolio h3 {
-    font-family: 'Roboto Slab', serif;
     font-size: 1rem;
 }
 
@@ -133,7 +129,6 @@ body {
 
 /* NAV */
 #openmenu {
-    font-family: 'Amatic SC', cursive;
     font-size: 1.25rem;
     background-color: #68BDCA;
     border-bottom: solid 2px white;
@@ -175,10 +170,10 @@ body {
 .overlay a {
     padding: 8px;
     text-decoration: none;
-    font-size: 2.25rem;
+    font-size: 36px;
     color: #818181;
     display: block;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
 .overlay a:hover,
@@ -190,15 +185,16 @@ body {
     position: absolute;
     top: 20px;
     right: 45px;
-    font-size: 3.75rem;
+    font-size: 60px;
 }
 
+/* Media Query */
 @media screen and (max-height: 450px) {
     .overlay a {
-        font-size: 1.25rem;
+        font-size: 20px;
     }
     .closebtn {
-        font-size: 2.5rem;
+        font-size: 40px;
         top: 15px;
         right: 35px;
     }
