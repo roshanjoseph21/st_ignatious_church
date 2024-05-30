@@ -3,89 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>   
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+    <title>St. Ignatious Orthodox Church</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body class="container-fluid">
-    <!-- Thanks for taking a look! -->
+    <!-- Navigation -->
+    <nav id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a class="smoothScroll" href="#welcome" onclick="closeNav()">Home</a>
+            <a class="smoothScroll" href="#about" onclick="closeNav()">About</a>
+            <a class="smoothScroll" href="#portfolio" onclick="closeNav()">Portfolio</a>
+        </div>
+    </nav>
+    <span id="openmenu" onclick="openNav()"><b>Menu</b></span>
 
-<!-- BACK TO TOP ARROW -->
-<!-- <a class="smoothScroll" href="#welcome"><img id="btt" class="img-responsive" src="http://allfordance.com/image/orbital-arrow-up.png"></a> -->
+    <!-- Welcome Section -->
+    <section id="welcome" class="text-center">
+        <h1>St. Ignatious Orthodox Church</h1>
+        <h3><b>Kallumkal</b></h3>
+        <a class="smoothScroll" href="#about"><img id="press" src="http://gowingwoman.com/img/menu_down_arrow.png" alt="Down Arrow"></a>
+    </section>
 
-<!-- NAV -->
-<div id="myNav" class="overlay">
+    <!-- About Section -->
+    <section id="about" class="container-fluid">
+        <h1>St. Ignatius Noorono</h1>
+        <div class="text-center">
+            <div id="self">
+                <img class="img-responsive" src="./images/stignatious.jpg" alt="St. Ignatius Noorono">
+            </div>
+        </div>
+        <p>The third bishop (Patriarch) of Antioch, succeeding Evodius around 68AD. Ignatius, who most likely, with Polycarp Bishop of Smyrna (commemorated 23 February) were fellow-disciples under St. Peter and St. John. It is a tradition by no means inconsistent with anything in the Epistles of either. His subsequent history is sufficiently indicated in his Epistles.<br>The seductive myth which represents this Father as the little child whom the Lord placed in the midst of his apostles (Matthew 18: 2) indicates at least the period when he may be supposed to have been born.
+        <br><br>If you'd like, scroll down to see some examples of my work!<br><br>Want to work together? I’d love to hear from you!</p>
+        <div class="d-flex justify-content-center">
+            <span id="email" class="me-3">
+                <img src="http://sellbuybook.com/images/email.png" alt="Email Icon"> emerald.teve@gmail.com
+            </span>
+            <span id="portScroll">
+                <a class="smoothScroll" href="#portfolio"><img src="http://www.meegankent.com/images/portfolio-icon2.png" alt="Portfolio Icon"> View My Portfolio</a>
+            </span>
+        </div>
+    </section>
 
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="container-fluid">
+        <h1>Portfolio</h1>
+        <h3>Here you'll find some projects I've worked on! Click on a project to see a demo of it.</h3>
+        <div class="container">
+            <div class="row">
+                <!-- Portfolio Item 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a target="_blank" href="https://s.codepen.io/Polianthes/debug/xVQoRx#">
+                        <img class="img-responsive thumbnail" src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?crop=entropy&fit=crop&fm=jpg&h=900&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1300" alt="Project 1">
+                    </a>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a target="_blank" href="https://s.codepen.io/Polianthes/debug/NNBLQw/XBrGRqgdvoZM">
+                        <img class="img-responsive thumbnail" src="https://farm8.staticflickr.com/7274/26213112344_c162d26712_b.jpg" alt="Project 2">
+                    </a>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a target="_blank" href="https://s.codepen.io/Polianthes/debug/NNpJwN">
+                        <img class="img-responsive thumbnail" src="https://farm8.staticflickr.com/7387/26213110134_8afa53cf2e_b.jpg" alt="Project 3">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <a class="smoothScroll" href="#welcome" onclick="closeNav()">Home</a>
-    <a class="smoothScroll" href="#about" onclick="closeNav()">About</a>
-    <a class="smoothScroll" href="#portfolio" onclick="closeNav()">Portfolio</a>
-  </div>
-
-</div>
-
-<!-- Use any element to open/show the overlay navigation menu -->
-<span id="openmenu" onclick="openNav()"><b>Menu</b></span>
-
-<center>
-  <!-- WELCOME -->
-  <div id="welcome">
-    <h1>St. Ignatious Orthodox Church</h1>
-    <h3><b>Kallumkal</b></h3>
-    <a class="smoothScroll" href="#about"><img id="press" src="http://gowingwoman.com/img/menu_down_arrow.png"></a>
-  </div>
-</center>
-
-<!-- ABOUT -->
-<div id="about" class="container-fluid">
-  <h1>St. Ignatius Noorono</h1>
-  <center>
-    <div id="self">
-      <img class="img-responsive" src="./images/stignatious.jpg" alt="">
-    </div>
-  </center>
-  <br>
-  <p>The third bishop (Patriarch) of Antioch, succeeding Evodius around 68AD. Ignatius, who most likely, with Polycarp Bishop of Smyrna (commemorated 23 February) were fellow-disciples under St. Peter and St. John. It is a tradition by no means inconsistent with anything in the Epistles of either. His subsequent history is sufficiently indicated in his Epistles.<br>The seductive myth which represents this Father as the little child whom the Lord placed in the midst of his apostles (Matthew 18: 2) indicates at least the period when he may be supposed to have been born.
-  <br><br>If you'd like, scroll down to see some examples of my work!<br><br>Want to work together? I’d love to hear from you!</p>
-  <br><br>
-  <span id="email">
-    <img src="http://sellbuybook.com/images/email.png"> emerald.teve@gmail.com</span>
-  <span id="portScroll">
-    <a class="smoothScroll" href="#portfolio"><img src="http://www.meegankent.com/images/portfolio-icon2.png"> View My Portfolio</a></span>
-</div>
-
-<!-- PORTFOLIO -->
-<div id="portfolio">
-  <h1>Portfolio</h1>
-  <h3>Here you'll find some projects I've worked on! Click on a project to see a demo of it.</h3>
-  <br>
-  <center>
-    <div id="port" class="container">
-      <table>
-          <!-- PORTFOLIO -->
-          <tr>
-            <a target="_blank" href="https://s.codepen.io/Polianthes/debug/xVQoRx#"><img class="img-responsive thumbnail" src="https://images.unsplash.com/photo-1423589989400-cc0270157ed0?crop=entropy&fit=crop&fm=jpg&h=900&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1300"></a>
-          </tr>
-          <!-- UPWORK -->
-          <tr>
-            <a target="_blank" href="https://s.codepen.io/Polianthes/debug/NNBLQw/XBrGRqgdvoZM"><img class="img-responsive thumbnail" src="https://farm8.staticflickr.com/7274/26213112344_c162d26712_b.jpg"></a>
-          </tr>
-          <!-- TRIBUTE PAGE -->
-          <tr>
-            <a target="_blank" href="https://s.codepen.io/Polianthes/debug/NNpJwN"><img class="img-responsive thumbnail" src="https://farm8.staticflickr.com/7387/26213110134_8afa53cf2e_b.jpg"></a>
-          </tr>
-      </table>
-    </div>
-  </center>
-</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
