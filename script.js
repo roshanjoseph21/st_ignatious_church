@@ -1,49 +1,50 @@
-// Function to close the navigation overlay
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        navText: ["<div class='owl-prev'><i class='fa fa-chevron-left'></i></div>", "<div class='owl-next'><i class='fa fa-chevron-right'></i></div>"],
+        dots: false
+    });
+
+    // Smooth scroll to sections and handle active link
+    $('nav a, .overlay a').on('click', function(e) {
+        if (this.hash !== '') {
+            e.preventDefault();
+            const hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                window.location.hash = hash;
+            });
+        }
+
+        $('nav a').removeClass('active');
+        $(this).addClass('active');
+        $('#nav').css('background-color', 'black');
+        closeNav();
+    });
+});
+
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
 }
 
-// Wait for the document to be fully loaded
-$(document).ready(() => {
-  // Smooth scroll for all elements with class 'smoothScroll'
-  $('.smoothScroll').on('click', function(event) {
-      // Check if the clicked link's pathname and hostname match the current location
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-          // Find the target element
-          let target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          // If the target element exists, animate the scroll
-          if (target.length) {
-              $('html, body').animate({
-                  scrollTop: target.offset().top
-              }, 1300); // The speed of the scroll in milliseconds
-              return false;
-          }
-      }
-  });
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
 
-  // Initialize Owl Carousel
-  $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 0,
-      nav: false,
-      dots: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
-      responsive: {
-          0: {
-              items: 1
-          },
-          600: {
-              items: 1
-          },
-          1000: {
-              items: 1
-          }
-      }
-  });
+window.onscroll = function() {scrollFunction()};
 
-  // Attach event listeners to the menu buttons
-  document.querySelector('.closebtn').addEventListener('click', closeNav);
-});
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("btt").style.display = "block";
+    } else {
+        document.getElementById("btt").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
