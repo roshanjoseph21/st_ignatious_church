@@ -1,8 +1,3 @@
-// Function to open the navigation overlay
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-
 // Function to close the navigation overlay
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
@@ -26,8 +21,29 @@ $(document).ready(() => {
           }
       }
   });
-});
 
-// Attach event listeners to the menu buttons
-document.getElementById('openmenu').addEventListener('click', openNav);
-document.querySelector('.closebtn').addEventListener('click', closeNav);
+  // Initialize Owl Carousel
+  $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive: {
+          0: {
+              items: 1
+          },
+          600: {
+              items: 1
+          },
+          1000: {
+              items: 1
+          }
+      }
+  });
+
+  // Attach event listeners to the menu buttons
+  document.querySelector('.closebtn').addEventListener('click', closeNav);
+});
