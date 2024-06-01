@@ -1,154 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>St. Ignatius Orthodox Church</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Ignatius Orthodox Church</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav id="nav">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 logo">
-          <a href="#" class="nav-link">
-            <h1 class="logo-text">ST. IGNATIOUS ORTHODOX CHURCH</h1> 
-          </a>
-        </div>
-        <div class="col-md-6 nav-links">
-          <ul>
-            <li><a href="#home" class="nav-link smoothScroll">Home</a></li>
-            <li><a href="#about-us" class="nav-link smoothScroll">About</a></li>
-            <li><a href="#services" class="nav-link smoothScroll">Services</a></li>
-            <li><a href="#gallery" class="nav-link smoothScroll">Gallery</a></li>
-            <li><a href="#contact-us" class="nav-link smoothScroll">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Navigation Overlay -->
-    <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div class="overlay-content">
-        <a href="#home" class="nav-link smoothScroll">Home</a>
-        <a href="#about-us" class="nav-link smoothScroll">About Us</a>
-        <a href="#services" class="nav-link smoothScroll">Services</a>
-        <a href="#gallery" class="nav-link smoothScroll">Gallery</a>
-        <a href="#contact-us" class="nav-link smoothScroll">Contact Us</a>
-      </div>
-    </div>
-
-  </nav>
-
-  <!-- Welcome Section -->
-  <section id="home" class="home">
-    <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-          </div>
-        </div>
-
-        <div class="row"> 
-            <div class="col-md-12"> 
-              <div class="owl-carousel owl-theme">
-                <div class="item"><img src="images/skyview.jpg" alt="Slide 1"></div>
-                <div class="item"><img src="images/side.jpg" alt="Slide 2"></div>
-                <div class="item"><img src="images/inside.jpg" alt="Slide 3"></div>
-              </div>
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">ST. IGNATIOUS ORTHODOX CHURCH</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link special-home" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
+                </ul>
             </div>
         </div>
-
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <div class="orange-box">
-            <p>This is an orange box.</p>
-          </div>
+    </nav>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#home">Home</a>
+            <a href="#about-us">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact-us">Contact Us</a>
         </div>
-      </div>
-
     </div>
-  </section>
 
-  <!-- About Section -->
-  <section id="about-us" class="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h2 class="about-title">About</h2>
-          <p class="about-text">
-            Your About Church goes here....
-          </p>
+    <section id="home" class="home">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="https://via.placeholder.com/1200x600" alt="Image 1">
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/1200x600" alt="Image 2">
+            </div>
+            <div class="item">
+                <img src="https://via.placeholder.com/1200x600" alt="Image 3">
+            </div>
         </div>
-        <div class="col-md-6">
-          <img src="images/self.jpg" alt="About Image" id="self">
+        <div class="owl-nav">
+            <div class="owl-prev"><span class="fa fa-chevron-left"></span></div>
+            <div class="owl-next"><span class="fa fa-chevron-right"></span></div>
         </div>
-      </div>
-    </div>
-  </section>
+        <div class="orange-box">
+            <p>Your Church's Welcome Message Goes Here</p>
+        </div>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h2 class="services-title">Services</h2>
-          <p class="services-text">
-            Your Church services Goes here.
-          </p>
+    <section id="about-us" class="about">
+        <div class="container">
+            <h2 class="about-title">About St. Ignatius Orthodox Church</h2>
+            <p class="about-text">Your church description goes here. Tell visitors about your history, beliefs, and mission. Include any relevant information about your parish.</p>
+            <img src="https://via.placeholder.com/800x400" alt="Church Image" class="img-fluid">
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="gallery">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h2 class="gallery-title">Gallery</h2>
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="services-title">Our Services</h2>
+            <p class="services-text">Describe your church's services here. Mention the times of worship, any special events, and how visitors can participate.</p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <img src="images/portfolio-1.jpg" alt="Portfolio Image" id="port">
-        </div>
-        <div class="col-md-4">
-          <img src="images/portfolio-2.jpg" alt="Portfolio Image" id="port">
-        </div>
-        <div class="col-md-4">
-          <img src="images/portfolio-3.jpg" alt="Portfolio Image" id="port">
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Us Section -->
-  <section id="contact-us" class="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h2 class="contact-title">Contact</h2>
-          <p class="contact-text">
-            Your Church contact details Goes here.
-          </p>
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="gallery-title">Photo Gallery</h2>
+            <div class="gallery-images">
+                <img src="https://via.placeholder.com/400x300" alt="Gallery Image 1" class="img-fluid">
+                <img src="https://via.placeholder.com/400x300" alt="Gallery Image 2" class="img-fluid">
+                <img src="https://via.placeholder.com/400x300" alt="Gallery Image 3" class="img-fluid">
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Back to Top Button -->
-  <button id="btt"><i class="fas fa-arrow-up"></i></button>
+    <section id="contact-us" class="contact">
+        <div class="container">
+            <h2 class="contact-title">Contact Us</h2>
+            <p>Your Church's Address</p>
+            <p>Phone Number: (XXX) XXX-XXXX</p>
+            <p>Email: yourchurch@email.com</p>
+        </div>
+    </section>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="script.js"></script>
+    <button id="btt" onclick="topFunction()" title="Go to top" class="btn btn-primary"><i class="fa fa-arrow-up"></i></button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
