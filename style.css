@@ -1,149 +1,135 @@
-/* Welcome Section Styles */
-.home {
-  background-image: url("images/hero-background.jpg"); /* Keep the background image */
-  background-size: cover;
-  padding: 100px 0;
-  text-align: center;
-  color: #fff;
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.home .welcome-title {
-  font-size: 3em;
-  margin-bottom: 20px;
+.navbar {
+  transition: background-color 0.5s;
+  background-color: black !important; /* Set the navbar background color to black */
+  height: 80px;
 }
 
-/* Image Slider Styles */
-.home .owl-carousel .item img {
-  width: 100%;
-  height: 50vh; /* Adjust the height as needed */
-  object-fit: cover; /* Ensure the image covers the entire area */
+.navbar-brand {
+  font-weight: 700;
+  color: white !important; /* Ensure the brand text color is white */
 }
 
-.home .owl-carousel {
-  display: block;
+.navbar-nav .nav-item .nav-link {
+  font-weight: 400;
   position: relative;
+  color: white !important; /* Ensure the nav-link text color is white */
+  transition: background-color 0.3s; /* Add transition for smooth effect */
+}
+
+/* Styling for the "Home" nav link */
+.navbar-nav .nav-item .nav-link.special-home {
+  background-color: orange;
+  width: 101%;
+  height: 40px;
+  bottom: -px;
+  left: 0;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: orange; /* Change background color on hover */
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  color: #FFA500;
+}
+
+.navbar-nav .nav-item .nav-link.active::after {
+  content: '';
+  position: absolute;
   width: 100%;
-}
-/* ... Other styles ... */
-
-/* Navigation Bar Styles */
-nav {
-    background-color: #000; /* Set background color to black */
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10; /* Make sure it stays on top of other elements */
+  height: 3px;
+  background-color: #FFA500;
+  bottom: -5px;
+  left: 0;
 }
 
-nav .container {
-    display: flex;
-    justify-content: space-between; /* Align logo and links */
-    align-items: center;
-}
-
-nav .nav-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav .nav-links li {
-    margin-left: 20px;
-}
-
-nav .nav-links a {
-    text-decoration: none;
-    color: #fff; /* Set text color to white */
-    font-weight: bold; /* Make the links bold */
-    transition: color 0.3s ease;
-}
-
-nav .nav-links a:hover {
-    color: #68BDCA; /* Or your desired hover color */
-}
-
-/* Styles for smaller screens (if needed): */
-@media (max-width: 768px) {
-    nav .nav-links ul {
-        display: flex; /* Show the navigation links on small screens */
-        flex-direction: column; /* Stack the links vertically */
-        align-items: center; 
-        width: 100%; 
-        padding: 20px 0; 
-        background-color: #000; 
-        position: fixed; 
-        top: 60px; 
-        left: 0; 
-        z-index: 100; 
-    }
-
-    nav .nav-links li {
-      margin-left: 0; 
-      margin-bottom: 10px; 
-    }
-}
-
-/* ... Your existing CSS ... */
-
-/* Logo Text Styles */
-nav .logo-text {
-  font-size: 2em;  /* Adjust the font size as needed */
-  font-weight: bold; 
-  color: #fff;  /* Set logo text color to white */
-}
-
-
-/* Navigation Overlay Styles */
 .overlay {
-  position: fixed; 
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
-  width: 0; 
-  height: 100%; 
-  background-color: rgba(0, 0, 0, 0.9); 
-  overflow-x: hidden; 
-  transition: 0.5s; 
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
 }
 
 .overlay-content {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 25%;
   width: 100%;
   text-align: center;
+  margin-top: 30px;
 }
 
-.overlay-content a {
-  padding: 15px;
+.overlay a {
+  padding: 8px;
   text-decoration: none;
-  font-size: 20px;
-  color: white;
+  font-size: 36px;
+  color: #818181;
   display: block;
   transition: 0.3s;
 }
 
-.overlay-content a:hover,
-.overlay-content a:focus {
-  color: #68BDCA;
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
 }
 
-.closebtn {
+.overlay .closebtn {
   position: absolute;
   top: 20px;
   right: 45px;
   font-size: 60px;
-  cursor: pointer;
+}
+
+.home {
+  position: relative;
+}
+
+.orange-box {
+  background-color: orange;
   color: white;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
 }
 
-.closebtn:hover {
-  color: #68BDCA;
+#btt {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 99;
 }
 
-/* Styles for smooth scrolling */
-.smoothScroll {
+.about img, .gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.owl-nav .owl-prev, .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
   cursor: pointer;
-  text-decoration: none;
+}
+
+.owl-nav .owl-prev {
+  left: 10px;
+}
+
+.owl-nav .owl-next {
+  right: 10px;
 }
