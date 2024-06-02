@@ -2,9 +2,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+
 .navbar {
   transition: background-color 0.5s;
-  background-color: black !important; /* Set the navbar background color to black */
+  background-color: rgb(56, 125, 221) !important; /* Set the navbar background color to black */
   height: 80px;
 }
 
