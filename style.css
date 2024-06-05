@@ -2,6 +2,19 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+h2{
+  font-family: "Manjari";
+  font-weight: normal;
+  font-style: normal;
+}
+
+p{
+    font-family: "Manjari";
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
 
 .navbar {
   transition: background-color 0.5s;
