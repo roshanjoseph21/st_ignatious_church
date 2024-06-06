@@ -38,7 +38,7 @@ p{
 /* Styling for the "Home" nav link */
 .navbar-nav .nav-item .nav-link.special-home {
   background-color: orange;
-  width: 100%;
+  width: 101%;
   height: 40px;
   bottom: -px;
   left: 0;
