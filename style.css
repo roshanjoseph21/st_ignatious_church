@@ -20,7 +20,7 @@ p{
   transition: background-color 0.5s;
   background-color: rgb(56, 125, 221) !important; /* Set the navbar background color to black */
   height: 80px;
-  width: 390.4px;
+  width: 100%;
 }
 
 .navbar-brand {
