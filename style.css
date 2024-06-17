@@ -8,17 +8,9 @@ h2{
   font-style: normal;
 }
 
-p{
-    font-family: "Manjari";
-    font-weight: normal;
-    font-style: normal;
-  }
-
-
-
 .navbar {
   transition: background-color 0.5s;
-  background-color: rgb(56, 125, 221) !important; /* Set the navbar background color to black */
+  background-color: rgb(60, 203, 167);
   height: 80px;
   width: 100%;
 }
@@ -86,7 +78,7 @@ p{
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color: #382626;
   display: block;
   transition: 0.3s;
 }
@@ -150,7 +142,7 @@ p{
 }
 /* CSS for footer */
 .footer {
-  background-color: black;
+  background-color: rgb(60, 203, 167);
   padding: 20px 0;
   text-align: center;
   /* position: fixed; */
@@ -162,3 +154,5 @@ p{
   margin: 0;
   color: white;
 }
+
+
