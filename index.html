@@ -1,137 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--stignatiouschurch.com-->
+<link rel="icon" href="images/logo.png">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. Ignatius Orthodox Church</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        @import url('https://cdn.jsdelivr.net/npm/malayalam-fonts@latest/fonts/Manjari/main.min.css');
-    </style>
-    <link rel="import" href="node_modules/malayalam-fonts/fonts/Manjari/main.css">
-    <script src="jquery-1.6.3.min.js"></script>  
+	<meta charset="UTF-8">
+	<title>Responsive HTML Church Website Template | CSS Flexbox Layout</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <nav id="nav" class="navbar navbar-expand-sm navbar-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">ST. IGNATIOUS ORTHODOX CHURCH</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link special-home" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-            <a href="#home">Home</a>
-            <a href="#about.html">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact-us">Contact Us</a>
-        </div>
-    </div>
-
-    <section id="home carouselExampleAutoplaying" class="home carousel slide" data-bs-ride="carousel">
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="5000">
-                <img src="./images/churchskyview.jpg" class="d-block mx-auto p-2" alt="Image1" height="250">
-              </div>
-              <div class="carousel-item" data-bs-interval="2500">
-                <img src="./images/church.jpg" class="d-block mx-auto p-2" alt="Image2" height="250" width="auto">
-              </div>
-              <div class="carousel-item" data-bs-interval="2500">
-                <img src="./images/inside.jpg" class="d-block mx-auto p-2" alt="Image2" height="250" width="auto">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-    </section>
-
-    <section id="about-us" class="about">
-        <div class="container">
-            <br> <h2 class="about-title"> <strong>സെൻ്റ് ഇഗ്നേഷ്യസ് ഓർത്തഡോക്‌സ് ദേവാലയം..... </strong><br> ചരിത്രത്തിന്റെ ഏടുകളിലൂടെ............</h2>
-            <p class="about-text">തിരുവല്ലാതാലൂക്കിൽ നെടുമ്പ്രംവില്ലേജിൽ (തിരുവല്ലാ പട്ടണത്തിൽ നിന്നും ഏകദേശം 6 കി. മീ തെക്കുമാറി) കല്ലുങ്കൽ എന്ന ഗ്രാമപ്രദേശത്തെ ദേശവാസികൾ ആരാധനയ്ക്കായി മാർത്തോമ്മാ ശ്ലീഹയാൽ സ്ഥാപിതമായ നിരണം വലിയപള്ളിയെ ആശ്രയിച്ചു പോന്നു. എന്നാൽ ഈ സ്ഥലത്തുതന്നെ ഒരു ആരാധനാലയം വേണമെന്ന ആഗ്രഹത്താൽ 1924-ൽ എം.ഡി.എൽ.പി. സ്‌കൂളിൽ ദേശവാസികൾ ഒത്തുചേർന്നു പല സ്ഥലനാമവും നിർദ്ദേശിച്ചു എങ്കിലും സ്ഥല നിർണ്ണയത്തെത്തുടർന്നുള്ള തർക്കങ്ങൾ ഏകദേശം ഒരു വർഷക്കാലം നീണ്ടുപോവുകയും അവസാനം മലങ്കരസഭയുടെ പരമാദ്ധ്യക്ഷനായിരുന്ന പ. ബസ്സേലിയോസ് ഗീവറുഗീസ് പ്രഥമൻ കാതോലിക്കാബാവാ തിരുമേനിയുടെ സന്നിധിയിൽ എത്തിച്ചേരുകയും ചെയ്തു. അദ്ദേഹത്തിൻ്റെ നിർദ്ദേശാനുസരണം പ. ബാവാ തിരുമേനി വി. കുർബ്ബാന അർപ്പിക്കുകയും, കുർബ്ബാനമദ്ധ്യേ രണ്ടു സ്ഥലനാമങ്ങൾ എഴുതി നറുക്കിട്ട് എടുക്കുകയും, <strong>തുരുത്തിക്കുന്ന്</strong> അഥവാ <strong>"ത്രിത്വക്കുന്ന്"</strong> എന്ന സ്ഥലത്ത് ദേവാലയം പണിയുവാനായി അടിസ്ഥാനശില ആശീർവദിച്ച് അനുഗ്രഹിച്ച് കൊടുത്തയയ്ക്കുകയും ഈ അടിസ്ഥാനശിലമേൽ 1925 ധനുമാസം 25 (ഡിസംബർ 25) ന് താല്ക്കാലിക കെട്ടിടത്തിൽ പ. ഇഗ്നാത്യോസ് പിതാവിൻ്റെ നാമധേയത്തിൽ ആദ്യദേവാലയം ആരംഭം കുറിച്ചു. എന്നാൽ 1930 കർക്കിടകം 31ന് പ്രഥമദേവാലയം അഗ്നിക്ക് ഇരയാവുകയും തുടർന്ന് ഏവരുടെയും ശ്രമഫലമായി മനോഹരമായ ഒരു കൊച്ചുദേവാലയം പടുത്തുയർത്തുകയും 1933-ാമാണ്ടിൽ അന്നത്തെ നിരണം ഭദ്രാസനാധിപനായിരുന്ന അഭിവന്ദ്യ ജോസഫ് മാർ സേവേറിയോസ് തിരുമേനിയാൽ കൂദാശ ചെയ്യപ്പെടുകയും ചെയ്തു. 1977 ൽ ഇടവകയുടെ ജൂബിലി വളരെ ഭംഗിയായി ആഘോഷിക്കുവാൻ് സർവ്വശക്തൻ ഇടയാക്കി ഈ സന്ദർഭത്തിലാണ് ഇടവകയ്ക്ക് മൂന്ന് കുരിശടികൾ ഉണ്ടാകുവാനും ഒരു ഭവനം നിർമ്മിച്ച് നല്‌കുവാനും സാധിച്ചത്. <br> 
-                <br>1999-ാമാണ്ട് ഈ ഇടവകയെ സംബന്ധിച്ച് വളരെ നിർണ്ണായകമായ ഒരുവർഷമായിരുന്നു. കാലപ്പഴക്കം കൊണ്ട് ജീർണ്ണാവസ്ഥയിലായിരുന്ന ദേവാലയം പൊളിച്ച് പണിയുവാനുള്ള തീരുമാനത്തിന്റെ അടിസ്ഥാനത്തിൽ 1999 സെപ്റ്റംബർ 5-ാം തീയതി വി കുർബ്ബാനയ്ക്കുശേഷം ചെങ്ങന്നൂർ ഭദ്രാസനത്തിൻ്റെ അഭിവന്ദ്യ തോമസ് മാർ അത്താനാസ്യോസ് തിരുമേനി പുതിയ ദേവാലയത്തിന്റെ അടിസ്ഥാനശിലാസ്ഥാപനം നടത്തുകയും 27-12-2000 മലങ്കരസഭയുടെ പരമാദ്ധ്യക്ഷൻ പ ബസ്സേലിയോസ് മാർത്തോമ്മാ മാത്യൂസ് രണ്ടാമൻ കാതോലിക്കാ ബാവയുടെ പ്രധാനകാർമ്മികത്വത്തിൽ പുതിയ ദേവാലയം കൂദാശ ചെയ്‌ത്‌ സഭയ്ക്കും നാടിനുമായി സമർപ്പിച്ചു. <br> 
-                <br>വർഷങ്ങൾ വീണ്ടും കഴിഞ്ഞുവെങ്കിലും ഇന്നും ഈ ദേവാലയം പുരോഗമനത്തിൻ്റെ പാതയിൽത്തന്നെയാണ്. 2009 മൂന്നുനോമ്പുദിനത്തിൽ ഇടവകയുടെ ഒരു ആഡിറ്റോറിയത്തിന്റെ ശിലാസ്ഥാപനം ഇടവക മെത്രാപ്പോലീത്ത അഭിവന്ദ്യ അത്താനാസ്യോസ് തിരുമേനി നിർവ്വഹിച്ചു. ഇപ്പോൾ ഈ ഇടവകയിൽ 62 ഭവനങ്ങൾ കൂടിവരുന്നു. ഈ ഇടവക പ. സഭയ്ക്കുവേണ്ടി ശുശ്രൂഷ ചെയ്യുവാനായി വെരി റവ. മാത്യൂസ് റമ്പാൻ (പത്തനാപുരം താബോർ ദയറ), റവ. ഫാ. തോമസ് തേക്കിൽ കോറപ്പിസ്ക്കോപ്പ അച്ചൻ, സിസ്റ്റർ മറിയമ്മ (സെൻ്റമേരീസ് കോൺവെൻ്റ്, കോഴിമല), റവ. ഫാ. ജോബി ജോർജ്ജ് എന്നിവരെ ദൈവം ഒരുക്കിത്തന്നതും എടുത്തുപറയേണ്ടതായ ഒന്നാണ്. <br>
-                <br> ഇത്രത്തോളം ഞങ്ങളെ വഴിനടത്തിയ സർവ്വശക്തനായ ദൈവത്തിൽ ഭാരമേല്പിച്ചുകൊണ്ടും ഇടവകയുടെ കാവൽപിതാവായ പ. ഇഗ്നാത്യോസ് പിതാവിൻ്റെയും ഇൻഡ്യയുടെ അപ്പോസ്തൊലൻ വി. മാർത്തോമ്മാ ശ്ലീഹാ, പരിശുദ്ധന്മാരായ മാർഗ്രിഗോറിയോസ്, മാർ ദീവന്ന്യാസിയോസ് എന്നീ പിതാക്കന്മാരുടെ മദ്ധ്യസ്ഥതയിൽ അഭയപ്പെട്ടുകൊണ്ടും ഈ ചരിത്രം സമർപ്പിച്ചു കൊള്ളുന്നു.</p>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="services-title"><strong>Our Services</strong></h2>
-            <p class="services-text"><strong>Sunday Service <br>
-            Morning prayer :at 7:00am, <br> followed by Holy Qurbana :at 8:30am</strong> <br>
-        <br><strong>Wednesday St. Ignatious Madhyastha Praarthana : at 5:30pm </strong> <br>
-    <br><strong>Saturday Evening Prayer :at 6:00pm, <br> followed by Corner Meeting at Houses</strong></p>
-        </div>
-    </section>
-    <br><br><br>
-
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="gallery-title"><strong>Photo Gallery</strong></h2>
-            <div class="gallery-images">
-                <h6><iframe width="390.4" height="250" src="https://www.youtube.com/embed/9WdjA3PvBR8?si=58rZxfw_H7wSWz1Z&amp;controls=0&amp;start=3"></iframe> <br>
-                    St. Ignatious Raasa Song by St.Ignatious Choir Kallumkal</h4> <br> <br>
-                <h6><iframe width="390.4" height="250" src="https://www.youtube.com/embed/PmGjXrApH1g?si=rMWg6kE0EoqDbKd0&amp;controls=0"></iframe> <br> 
-                    A Walkthrough to the renovated Church</h6> <br> <br>       
-                <iframe width="390.4" height="250" src="https://www.youtube.com/embed/Hr-w5AtaFsc?si=sJtWs0d398PVla0d&amp;controls=0"></iframe>
-        </div>
-    </section>
-    <br>
-
-    <section id="contact-us" class="contact">
-        <div class="container">
-            <u><h2 class="contact-title">Contact Us</h2></u>
-            <p><i class="fa-solid fa-location-dot"></i> ST. IGNATIOUS ORTHODOX CHURCH KALLUMKAL EAST <br>
-                KALLUMKAL P.O THIRUVALLA, KERALA 689102 <br>
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.764578584913!2d76.55197727502286!3d9.35408909072081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0623e74cd0865f%3A0x2b9913050b7b79db!2sST.%20IGNATIOUS%20ORTHODOX%20CHURCH%20KALLUMKAL%20EAST!5e0!3m2!1sml!2sin!4v1717644877807!5m2!1sml!2sin" width="390.4" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </p>
-            <p>Phone Number: (XXX) XXX-XXXX</p>
-            <p>Email: yourchurch@email.com</p>
-        </div>
-    </section>
-
-    <button id="btt" onclick="topFunction()" title="Go to top" class="btn btn-primary"><i class="fa fa-arrow-up"></i></button>
-
-    <footer class="footer">
-        <div class="container">
-            <p>All rights reserved &copy; St Ignatious Church</p><br>
-            <a href="https://www.facebook.com/kallumkalpalli.palli"><i class="fa-brands fa-facebook fa-2xl"></i>Kallumkal Pazhayapalli</a>      
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="script.js"></script>
+	<header>
+		<h2><a href="#"><img alt="" src="images/logo.png" style="width: 100px;"></a></h2>
+		<ul class="nav">
+			<li>
+				<a href="#">Home</a>
+			</li>
+			<li>
+				<a href="#about">About</a>
+			</li>
+			<li>
+				<a href="#services">Services</a>
+			</li>
+			<li>
+				<a href="#contact">Contact</a>
+			</li>
+		</ul>
+	</header>
+	<section class="banner-area">
+		<div class="banner-img"></div>
+        <h1>ST IGNATIOUS <span>ORTHODOX CHURCH </span>KALLUMKAL</h1>
+		<h3></h3><a class="banner-btn" href="#">More Info</a>
+	</section>
+	<section class="about-area" id="about">
+		<h3 class="section-title">About <span>Us</span></h3>
+		<ul class="about-content">
+			<li class="about-left"></li>
+			<li class="about-right">
+				<h2>Saint Ignatious Orthodox Church
+                    Throught the History</h2>
+				<p><i class="fa fa-arrow-right">&nbsp;</i>തിരുവല്ലാതാലൂക്കിൽ നെടുമ്പ്രംവില്ലേജിൽ (തിരുവല്ലാ പട്ടണത്തിൽ നിന്നും ഏകദേശം 6 കി. മീ തെക്കുമാറി) കല്ലുങ്കൽ എന്ന ഗ്രാമപ്രദേശത്തെ ദേശവാസികൾ ആരാധനയ്ക്കായി മാർത്തോമ്മാ ശ്ലീഹയാൽ സ്ഥാപിതമായ നിരണം വലിയപള്ളിയെ ആശ്രയിച്ചു പോന്നു. എന്നാൽ ഈ സ്ഥലത്തുതന്നെ ഒരു ആരാധനാലയം വേണമെന്ന ആഗ്രഹത്താൽ 1924-ൽ എം.ഡി.എൽ.പി. സ്‌കൂളിൽ ദേശവാസികൾ ഒത്തുചേർന്നു പല സ്ഥലനാമവും നിർദ്ദേശിച്ചു എങ്കിലും സ്ഥല നിർണ്ണയത്തെത്തുടർന്നുള്ള തർക്കങ്ങൾ ഏകദേശം ഒരു വർഷക്കാലം നീണ്ടുപോവുകയും അവസാനം മലങ്കരസഭയുടെ പരമാദ്ധ്യക്ഷനായിരുന്ന പ. ബസ്സേലിയോസ് ഗീവറുഗീസ് പ്രഥമൻ കാതോലിക്കാബാവാ തിരുമേനിയുടെ സന്നിധിയിൽ എത്തിച്ചേരുകയും ചെയ്തു. അദ്ദേഹത്തിൻ്റെ നിർദ്ദേശാനുസരണം പ. ബാവാ തിരുമേനി വി. കുർബ്ബാന അർപ്പിക്കുകയും, കുർബ്ബാനമദ്ധ്യേ രണ്ടു സ്ഥലനാമങ്ങൾ എഴുതി നറുക്കിട്ട് എടുക്കുകയും, തുരുത്തിക്കുന്ന് അഥവാ "ത്രിത്വക്കുന്ന്" എന്ന സ്ഥലത്ത് ദേവാലയം പണിയുവാനായി അടിസ്ഥാനശില ആശീർവദിച്ച് അനുഗ്രഹിച്ച് കൊടുത്തയയ്ക്കുകയും ഈ അടിസ്ഥാനശിലമേൽ 1925 ധനുമാസം 25 (ഡിസംബർ 25) ന് താല്ക്കാലിക കെട്ടിടത്തിൽ പ. ഇഗ്നാത്യോസ് പിതാവിൻ്റെ നാമധേയത്തിൽ ആദ്യദേവാലയം ആരംഭം കുറിച്ചു.</p>
+                <a class="about-content" href="#">Readmore...</a>
+			</li>
+		</ul>
+	</section>
+	<section class="msg-area">
+		<div class="msg-content">
+			<h2>Daly Biblical Verses</h2>
+			<p>"Do not conform to the pattern of this world, but be transformed by the renewing of your mind. Then you will be able to test and approve what God’s will is—his good, pleasing and perfect will.
+                Romans 12:2 (NIV)"</p>
+		</div>
+	</section>
+	<section class="services-area" id="services">
+		<h3 class="section-title">Our <span>Offers</span></h3>
+		<ul class="services-content">
+			<li>
+				<img alt="" src="images/">
+				<h4>Prayer</h4>
+                <p>Saturday Evening Prayer at 6:00pm<br>
+                    followed by Corner Meeting at Houses</p>
+				<p>Sunday Service
+                    Prabhadha Namskaram:at 7:00am<br>
+                    Followed by Holy Qurbana at 8:30am</p>
+			</li>
+			<li>
+				<img alt="" src="images/3.jpg">
+				<h4>offerings</h4>
+				<p>Contact Church Office for special Offerings or Holy Qurbana.</p>
+			</li>
+			<li>
+				<img alt="" src="images/4.jpg">
+				<h4>Blessings</h4>
+				<p>St. Ignatious Madhyastha Praarthana on all Wednesadays at 5:30pm.</p>
+			</li>
+		</ul>
+	</section>
+	<section class="contact-area" id="contact">
+		<h3 class="section-title">Our <span>Contact</span></h3>
+		<ul class="contact-content">
+			<li>
+				<i class="fa fa-map-marker"></i>
+				<p>ST. IGNATIOUS ORTHODOX CHURCH KALLUMKAL EAST
+                    KALLUMKAL P.O THIRUVALLA, KERALA 689102</p>
+			</li>
+			<li>
+				<i class="fa fa-phone"></i>
+				<p>+91 99471 29415 (Secretary)<br>
+                    +91 94956 53221(Trustee)</p>
+			</li>
+			<li>
+				<i class="fa fa-envelope"></i>
+				<p>info@stignatious.com<br>
+				kallumkalpazhayapally@gmail.com</p>
+			</li>
+		</ul>
+	</section>
+	<footer>
+		<p>All Rights Reserved © St Ignatious Church</p>
+	</footer>
 </body>
 </html>
