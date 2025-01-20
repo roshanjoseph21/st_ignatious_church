@@ -30,7 +30,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: #fff;
+	color: #ffffff;
 	padding: 35px 100px 0;
 }
 header h2 span {
@@ -105,7 +105,7 @@ section p {
 	position: relative;
 	justify-content: center;
 	min-height: 100vh;
-	color: #fff;
+	color: #ffffff;
 	text-align: center;
 }
 .banner-area .banner-img {
@@ -164,6 +164,9 @@ section p {
 }
 /*about area*/
 
+.about-area {
+	background: linear-gradient(to top left, #d2bda8 20%, #e1e3d2 80%)
+}
 ul.about-content {
 	width: 100%;
 	display: -webkit-flex;
@@ -231,16 +234,20 @@ ul.about-content {
 /*msg area*/
 
 .msg-area {
-	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/a2.jpeg);
+	background: linear-gradient(rgb(41, 57, 60), rgb(124, 186, 200)), url(images/a2.jpeg);
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
 	color: #fff;
 	text-align: center;
+	height: 300px;
 }
 /*service area*/
 
+.services-area{
+	background-color: #f6f5dc;
+}
 ul.services-content {
 	width: 100%;
 	display: -webkit-flex;
@@ -283,6 +290,10 @@ ul.services-content {
 	}
 }
 /*contact area*/
+
+.contact-area{
+	background-color: #e9f4df;
+}
 
 ul.contact-content {
 	width: 100%;
@@ -332,5 +343,46 @@ footer {
 	text-align: center;
 	color: #fff;
 	background-color: #000;
-	padding: 60px 0;
+	padding: 10px 0;
+	position: relative;
 }
+
+.ig  {
+	text-align: center;
+}
+
+.credits {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	text-align: right;
+	font-size: large;
+	color: rgb(154, 230, 180);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fa {
+	padding: 20px;
+	font-size: 20px;
+	width: 5px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 100%;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+	opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+	color: white;
+  }
+  
+  /* Twitter */
+  .fa-instagram {
+	color: white;
+  }
