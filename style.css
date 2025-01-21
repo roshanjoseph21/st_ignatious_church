@@ -165,7 +165,7 @@ section p {
 /*about area*/
 
 .about-area {
-	background: linear-gradient(to top left, #d2bda8 20%, #e1e3d2 80%)
+	background: linear-gradient(to top left, #b8e3e9 20%, #93b1b5 80%)
 }
 ul.about-content {
 	width: 100%;
@@ -234,7 +234,7 @@ ul.about-content {
 /*msg area*/
 
 .msg-area {
-	background: linear-gradient(rgb(41, 57, 60), rgb(124, 186, 200)), url(images/a2.jpeg);
+	background: linear-gradient(rgb(7, 73, 52), rgb(21, 156, 140)), url(images/a2.jpeg);
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center center;
@@ -246,7 +246,7 @@ ul.about-content {
 /*service area*/
 
 .services-area{
-	background-color: #f6f5dc;
+	background-color: #cbcbcb;
 }
 ul.services-content {
 	width: 100%;
@@ -292,7 +292,7 @@ ul.services-content {
 /*contact area*/
 
 .contact-area{
-	background-color: #e9f4df;
+	background-color: #7d99aa;
 }
 
 ul.contact-content {
@@ -357,7 +357,7 @@ footer {
 	right: 10px;
 	text-align: right;
 	font-size: large;
-	color: rgb(154, 230, 180);
+	color: #e97528;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
