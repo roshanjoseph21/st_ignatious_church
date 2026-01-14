@@ -1,111 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--stignatiouschurch.com-->
-<link rel="icon" href="images/logo.png">
 <head>
-	<meta charset="UTF-8">
-	<title>ST IGNATIOUS ORTHODOX CHURCH</title>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="./style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>St Ignatious Orthodox Church</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: black;
+      overflow-x: hidden;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      height: 70px;
+      background: rgba(0,0,0,0.95);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header img {
+      height: 46px;
+    }
+
+    header h2 {
+      font-size: 0.9rem;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    /* Desktop nav */
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: #cc3333;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* ================= HAMBURGER ================= */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      transition: 0.3s;
+    }
+
+    /* ================= MOBILE MENU ================= */
+    .mobile-nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 70px);
+      background: rgba(0,0,0,0.98);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+      z-index: 999;
+    }
+
+    .mobile-nav a {
+      color: white;
+      font-size: 1.4rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .mobile-nav.active {
+      transform: translateY(0);
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      height: calc(100vh - 70px);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      color: white;
+      padding: 20px;
+      background: black;
+    }
+
+    .hero video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.45)
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .hero h1 .red {
+      color: #cc3333;
+    }
+
+    /* DAILY VERSE */
+    .daily-verse {
+      margin-top: 16px;
+      font-size: 1rem;
+      opacity: 0.9;
+      font-style: italic;
+      animation: verseFade 1s ease;
+    }
+
+    .daily-verse span {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.9rem;
+      font-style: normal;
+      opacity: 0.8;
+    }
+
+    .hero button {
+      margin-top: 30px;
+      padding: 14px 36px;
+      border: none;
+      background: white;
+      color: black;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    }
+
+    .hero button:hover {
+      transform: translateY(-3px) scale(1.04);
+    }
+
+    .hero button:active {
+      transform: scale(0.96);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes verseFade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ================= MOBILE ================= */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      header h2 { font-size: 0.75rem; }
+      .hero h1 { font-size: 2rem; }
+      .daily-verse { font-size: 0.9rem; }
+    }
+
+    /* ================= SECTIONS ================= */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #111;
+  color: white;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #cc3333;
+}
+
+.section p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* Cards */
+.cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 30px 20px;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: black;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+  </style>
 </head>
 <body>
-	<header>
-		<h2><a href="#"><img alt="" src="./images/logo.png" style="width: 100px;"></a></h2>
-		<ul class="nav">
-			<li>
-				<a href="#">Home</a>
-			</li>
-			<li>
-				<a href="#about">About</a>
-			</li>
-			<li>
-				<a href="#services">Services</a>
-			</li>
-			<li>
-				<a href="#contact">Contact</a>
-			</li>
-			<li>
-				<a href="#gallery">Gallery</a>
-			</li>
-		</ul>
-	</header>
-	<section class="banner-area">
-		<div class="banner-img"></div>
-        <h1>ST IGNATIOUS <span>ORTHODOX CHURCH </span>KALLUMKAL</h1>
-		<h3></h3><a class="banner-btn" href="./about.html" target="_blank">More Info</a>
-	</section>
-	<section class="about-area" id="about">
-		<h3 class="section-title">About <span>Us</span></h3>
-		<ul class="about-content">
-			<li class="about-left"></li>
-			<li class="about-right">
-				<h2>Saint Ignatious Orthodox Church
-                    Throught the History</h2>
-				<p><i class="fa fa-arrow-right">&nbsp;</i>തിരുവല്ലാതാലൂക്കിൽ നെടുമ്പ്രംവില്ലേജിൽ (തിരുവല്ലാ പട്ടണത്തിൽ നിന്നും ഏകദേശം 6 കി. മീ തെക്കുമാറി) കല്ലുങ്കൽ എന്ന ഗ്രാമപ്രദേശത്തെ ദേശവാസികൾ ആരാധനയ്ക്കായി മാർത്തോമ്മാ ശ്ലീഹയാൽ സ്ഥാപിതമായ നിരണം വലിയപള്ളിയെ ആശ്രയിച്ചു പോന്നു. എന്നാൽ ഈ സ്ഥലത്തുതന്നെ ഒരു ആരാധനാലയം വേണമെന്ന ആഗ്രഹത്താൽ 1924-ൽ എം.ഡി.എൽ.പി. സ്‌കൂളിൽ ദേശവാസികൾ ഒത്തുചേർന്നു പല സ്ഥലനാമവും നിർദ്ദേശിച്ചു എങ്കിലും സ്ഥല നിർണ്ണയത്തെത്തുടർന്നുള്ള തർക്കങ്ങൾ ഏകദേശം ഒരു വർഷക്കാലം നീണ്ടുപോവുകയും അവസാനം മലങ്കരസഭയുടെ പരമാദ്ധ്യക്ഷനായിരുന്ന പ. ബസ്സേലിയോസ് ഗീവറുഗീസ് പ്രഥമൻ കാതോലിക്കാബാവാ തിരുമേനിയുടെ സന്നിധിയിൽ എത്തിച്ചേരുകയും ചെയ്തു. അദ്ദേഹത്തിൻ്റെ നിർദ്ദേശാനുസരണം പ. ബാവാ തിരുമേനി വി. കുർബ്ബാന അർപ്പിക്കുകയും, കുർബ്ബാനമദ്ധ്യേ രണ്ടു സ്ഥലനാമങ്ങൾ എഴുതി നറുക്കിട്ട് എടുക്കുകയും, തുരുത്തിക്കുന്ന് അഥവാ "ത്രിത്വക്കുന്ന്" എന്ന സ്ഥലത്ത് ദേവാലയം പണിയുവാനായി അടിസ്ഥാനശില ആശീർവദിച്ച് അനുഗ്രഹിച്ച് കൊടുത്തയയ്ക്കുകയും ഈ അടിസ്ഥാനശിലമേൽ 1925 ധനുമാസം 25 (ഡിസംബർ 25) ന് താല്ക്കാലിക കെട്ടിടത്തിൽ പ. ഇഗ്നാത്യോസ് പിതാവിൻ്റെ നാമധേയത്തിൽ ആദ്യദേവാലയം ആരംഭം കുറിച്ചു.<br>
-					<a class="about-content" href="./about.html" target="_blank" style="color: rgb(11, 69, 27);"><strong>Read More....</strong></a></p>
-                <!-- <a class="about-content" href="./about.html" target="_blank" style="color: rgb(0, 0, 0);"><strong>R e a d &nbsp;&nbsp; m o r e...</strong></a> -->
-			</li>
-		</ul>
-	</section>
-	<section class="msg-area">
-		<div class="msg-content">
-			<h2>Daily Biblical Verses</h2>
-			<p id="daily-verse"></p>
-		</div>
-	</section>
-	<section class="services-area" id="services">
-		<h3 class="section-title">Our <span>Offers</span></h3>
-		<ul class="services-content">
-			<li>
-				<h4>Prayer</h4>
-                <p>Saturday Evening Prayer at 6:00pm<br>
-                    followed by Corner Meeting at Houses</p>
-				<p>Sunday Service
-                    Prabhadha Namskaram:at 7:00am<br>
-                    Followed by Holy Qurbana at 8:30am</p>
-					<img alt="" src="images/2.jpg">
-			</li>
-			<li>
-				<img alt="" src="images/3.jpg">
-				<h4>offerings</h4>
-				<p>Contact Church Office for special Offerings or Holy Qurbana.</p>
-			</li>
-			<li>
-				<img alt="" src="images/4.jpg">
-				<h4>Blessings</h4>
-				<p>St. Ignatious Madhyastha Praarthana on all Wednesadays at 5:30pm.</p>
-			</li>
-		</ul>
-	</section>
-	<section class="contact-area" id="contact">
-		<h3 class="section-title">Our <span>Contact</span></h3>
-		<ul class="contact-content">
-			<li>
-				<a href="https://maps.app.goo.gl/7FHTWN57tv3zhf1e8" target="_blank"><i class="fa fa-map-marker"></i></a>
-				<p>ST. IGNATIOUS ORTHODOX CHURCH KALLUMKAL EAST
-                    KALLUMKAL P.O THIRUVALLA, KERALA 689102</p>
-					<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15747.14103013208!2d76.56085436878661!3d9.35226186539819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0623e74cd0865f%3A0x2b9913050b7b79db!2sST.%20IGNATIOUS%20ORTHODOX%20CHURCH%20KALLUMKAL%20EAST!5e0!3m2!1sen!2sin!4v1735950343150!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-			</li>
-			<li>
-				<i class="fa fa-phone"></i>
-				<p>+91 99471 29415 (Secretary)<br>
-                    +91 94956 53221(Trustee)</p>
-			</li>
-			<li>
-				<i class="fa fa-envelope"></i>
-				<p>info@stignatious.com<br>
-				kallumkalpazhayapally@gmail.com</p>
-			</li>
-		</ul>
-	</section>
-	<footer>
-		<p>All Rights Reserved © St Ignatious OCYM 2024</p>
-		<i class="ig"><a href="https://www.instagram.com/pazhayapalli.ocym/" class="fa fa-instagram" target="_blank">&nbsp;pazhayapalli.ocym</a></i>
-		<p class="credits"><strong>Developed by Abel T Manu, Theakumparambil<br>
-		Roshan Joseph, Mundattumkuzhiyil</strong></p>
-	</footer>
-	<script src="./script.js"></script>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-box">
+      <img src="images/logo.png" alt="Church Logo">
+      <h2>ST IGNATIOUS ORTHODOX<br>CHURCH KALLUMKAL</h2>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="prayer.html">PRAYER REQUEST</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="login.html">LOGIN</a>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">HOME</a>
+    <a href="prayer.html">PRAYER REQUEST</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="login.html">LOGIN</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      webkit-playsinline
+      preload="auto"
+      poster="images/church-fallback.jpg">
+      <source src="testx.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-content">
+      <h1>
+        ST <span class="red">IGNATIOUS</span> ORTHODOX<br>
+        CHURCH
+      </h1>
+
+      <!-- DAILY VERSE -->
+      <div class="daily-verse" id="dailyVerse"></div>
+
+      <button>READ MORE</button>
+    </div>
+
+  </section>
+<!-- ABOUT SECTION -->
+<section class="section about">
+  <h2>About Our Church</h2>
+  <p>
+    St Ignatious Orthodox Church, Kallumkal, is a place of prayer, faith,
+    and fellowship. We strive to nurture spiritual growth through worship,
+    service, and community.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section class="section services">
+  <h2>Worship & Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Holy Qurbana</h3>
+      <p>Every Sunday & Feast Days</p>
+    </div>
+    <div class="card">
+      <h3>Daily Prayers</h3>
+      <p>Morning & Evening Prayers</p>
+    </div>
+    <div class="card">
+      <h3>Special Services</h3>
+      <p>Fasting prayers & memorial services</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 St Ignatious Orthodox Church, Kallumkal</p>
+</footer>
+  <!-- SCRIPT -->
+  <script>
+    /* Mobile nav */
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    hamburger.addEventListener("click", () => {
+      mobileNav.classList.toggle("active");
+      document.body.style.overflow =
+        mobileNav.classList.contains("active") ? "hidden" : "auto";
+    });
+
+    /* DAILY VERSE LOGIC */
+    const verses = [
+      { text: "The Lord is my shepherd; I shall not want.", ref: "Psalm 23:1" },
+      { text: "I can do all things through Christ who strengthens me.", ref: "Philippians 4:13" },
+      { text: "Be strong and courageous. Do not be afraid.", ref: "Joshua 1:9" },
+      { text: "For I know the plans I have for you, declares the Lord.", ref: "Jeremiah 29:11" },
+      { text: "Trust in the Lord with all your heart.", ref: "Proverbs 3:5" },
+      { text: "The Lord is my light and my salvation—whom shall I fear?", ref: "Psalm 27:1" }
+    ];
+
+    const today = new Date().getDate();
+    const verse = verses[today % verses.length];
+
+    document.getElementById("dailyVerse").innerHTML =
+      `"${verse.text}"<span>— ${verse.ref}</span>`;
+  </script>
+
 </body>
 </html>
+
