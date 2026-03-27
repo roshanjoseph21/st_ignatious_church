@@ -43,3 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const dailyVerse = getDailyVerse();
     document.getElementById("daily-verse").innerText = `"${dailyVerse.verse}" — ${dailyVerse.ref}`;
 });
+// Loader Fade After 3 Seconds
+
+window.addEventListener("load", function(){
+	setTimeout(function(){
+		document.getElementById("loader").classList.add("fade-out");
+	},3000);
+});
